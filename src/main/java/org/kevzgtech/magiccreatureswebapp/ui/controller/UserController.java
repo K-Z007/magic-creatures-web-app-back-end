@@ -19,8 +19,8 @@ public class UserController
     @PostMapping("/register")
     public UserEntity register(@RequestBody UserEntity user){
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        System.out.println("Register: " + user);
+//        System.out.println("Register: " + user);
         userService.createUser(user);
-        return user;
+        return null;
     }
 }
