@@ -1,0 +1,21 @@
+# Mark all Java files as source code
+*.java linguist-language=Java
+
+# Mark all XML files as source code
+*.xml linguist-language=XML
+
+# Exclude binary files from language statistics
+*.jar linguist-detectable=false
+*.war linguist-detectable=false
+
+# Exclude documentation files from language statistics
+*.md linguist-documentation=true
+*.txt linguist-documentation=true
+
+# Exclude vendor files from language statistics
+src/main/resources/static/vendor/* linguist-vendored=true
+
+# Include specific directories as source code
+src/main/java/* linguist-vendored=false
+src/main/resources/* linguist-vendored=false
+src/test/java/* linguist-vendored=false
